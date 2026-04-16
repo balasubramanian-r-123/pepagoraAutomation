@@ -6,10 +6,8 @@ export default defineConfig({
   use: {
     baseURL: "https://www.istaging.pepagora.com",
     headless: false,
-    //viewport: { width: 1280, height: 720 },
     launchOptions: {
       args: ["--start-maximized"],
-      slowMo:1000,
     },
     viewport: null,
     screenshot: "only-on-failure",

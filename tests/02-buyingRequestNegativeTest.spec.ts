@@ -20,10 +20,8 @@ test("Not giving data in product name field", async ({ page }) => {
   // Step 2: Clicking continue to proceed to OTP page
   await buying.clickContinue();
 
-
   // step 3: Validating error messages
   const errorMessages = buying.errorMessages();
-
   expect (errorMessages.productErrorText).toHaveText("Product Name is required");
 });
 
@@ -49,9 +47,7 @@ test("Giving Upper case characters in product name field", async ({ page }) => {
   // Step 3: Clicking continue to proceed to OTP page
   await buying.clickContinue();
 
-
   // step 3: Validating error messages
   const errorMessages = buying.errorMessages();
-
   expect (errorMessages.productCapsErrorText).toHaveText("Product Name must not be in all caps");
 });
